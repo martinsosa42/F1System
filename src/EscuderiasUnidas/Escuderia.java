@@ -8,13 +8,11 @@ public class Escuderia {
     //Asociacion 1..* con Auto, Mecanico y Piloto.
     private List<Auto>autos;
     private List<Mecanico>mecanicos;
-    private List<Piloto> pilotos;
     private List<PilotoEscuderia>pilotosEscuderia;
 
     public Escuderia(){
         this.mecanicos = new ArrayList<Mecanico>();
         this.autos = new ArrayList<>();
-        this.pilotos = new ArrayList<>();
         this.pilotosEscuderia = new ArrayList<>();
     }
 
@@ -24,15 +22,11 @@ public class Escuderia {
         this.autos = new ArrayList<>(); //Inicio de las listas.
         this.mecanicos = mecanicos;
         this.autos = autos;
-        this.pilotos = pilotos;
         this.pilotosEscuderia = pilotosEscuderia;
     }
 
     public void agregarMecanico(Mecanico m){
         this.mecanicos.add(m);
-    }
-    public void agregarPiloto(Piloto p){
-        this.pilotos.add(p);
     }
     public void agregarAuto(Auto a){
         this.autos.add(a);
@@ -44,7 +38,6 @@ public class Escuderia {
     public String getNombre() {return nombre;}
     public Pais getPais() {return pais;}
     public List<Mecanico> getMecanicos() {return mecanicos;}
-    public List<Piloto> getPilotos() {return pilotos;}
     public List<Auto> getAutos() {return autos;}
     public List<PilotoEscuderia> getPilotosEscuderia() {return pilotosEscuderia;}
 
@@ -56,9 +49,6 @@ public class Escuderia {
     }
     public void setMecanicos(List<Mecanico> mecanicos) {
         this.mecanicos = mecanicos;
-    }
-    public void setPilotos(List<Piloto> pilotos) {
-        this.pilotos = pilotos;
     }
     public void setAutos(List<Auto> autos) {
         this.autos = autos;
