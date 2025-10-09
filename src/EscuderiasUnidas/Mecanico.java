@@ -1,38 +1,47 @@
 package EscuderiasUnidas;
 import java.lang.Enum;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mecanico extends Persona{
     private Especialidad especialidad;
     private int aniosExperiencia;
+    private List<Escuderia>escuderias;
 
-    public Mecanico(String dni, String nombre, String apellido, Especialidad especialidad, int aniosExperiencia){
+    public Mecanico(){
+        this.escuderias = new ArrayList<>();
+    }
+
+    public Mecanico(String dni, String nombre, String apellido, Especialidad especialidad, int aniosExperiencia,List<Escuderia> escuderias){
         super(dni, nombre, apellido);
         this.especialidad = especialidad;
         this.aniosExperiencia = aniosExperiencia;
+        this.escuderias = escuderias;
+    }
+
+    //Metodos para agregar Escuderias a la lista.
+    public void agregarEscuderia(Escuderia e){
+        this.escuderias.add(e);
     }
 
     public Especialidad getEspecialidad() {
         return especialidad;
     }
+    public int getAniosExperiencia() {
+        return aniosExperiencia;
+    }
+    public List<Escuderia> getEscuderias() {
+        return escuderias;
+    }
 
     public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
     }
-
-    public int getAniosExperiencia() {
-        return aniosExperiencia;
-    }
-
     public void setAniosExperiencia(int aniosExperiencia) {
         this.aniosExperiencia = aniosExperiencia;
     }
-
-    public enum Especialidad{
-        MOTOR,
-        NEUMATICOS,
-        CHASIS,
-        ELECTRONICA
+    public void setEscuderias(List<Escuderia> escuderias) {
+        this.escuderias = escuderias;
     }
-
 }
 
