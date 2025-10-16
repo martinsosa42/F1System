@@ -1,4 +1,4 @@
-package EscuderiasUnidas;
+package Modelo;
 
 public class PilotoEscuderia {
     private String desdeFecha;

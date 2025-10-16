@@ -1,5 +1,4 @@
-package EscuderiasUnidas;
-import java.util.ArrayList;
+package Modelo;
 
 public class Carrera {
     private String fechaRealizacion;

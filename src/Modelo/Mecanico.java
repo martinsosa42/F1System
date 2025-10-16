@@ -1,5 +1,4 @@
-package EscuderiasUnidas;
-import java.lang.Enum;
+package Modelo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +11,8 @@ public class Mecanico extends Persona{
         this.escuderias = new ArrayList<>();
     }
 
-    public Mecanico(String dni, String nombre, String apellido, Especialidad especialidad, int aniosExperiencia,List<Escuderia> escuderias){
-        super(dni, nombre, apellido);
+    public Mecanico(String dni, String nombre, String apellido,List<Pais>paises, Especialidad especialidad, int aniosExperiencia,List<Escuderia> escuderias){
+        super(dni, nombre, apellido,paises);
         this.especialidad = especialidad;
         this.aniosExperiencia = aniosExperiencia;
         this.escuderias = escuderias;

@@ -1,4 +1,4 @@
-package EscuderiasUnidas;
+package Modelo;
 
 public class AutoPiloto {
     private String fechaAsignacion;
@@ -11,6 +11,10 @@ public class AutoPiloto {
         this.fechaAsignacion = fechaAsignacion;
         this.auto = auto;
         this.piloto = piloto;
+    }
+
+    public void agregarAutoPiloto(String fechaAsignacion,Auto auto,Piloto piloto){
+        agregarAutoPiloto(fechaAsignacion,auto,piloto);
     }
 
     public String getFechaAsignacion() {

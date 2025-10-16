@@ -1,4 +1,4 @@
-package EscuderiasUnidas;
+package Modelo;
 
 public enum Especialidad{
     MOTOR,

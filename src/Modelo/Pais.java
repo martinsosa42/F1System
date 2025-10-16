@@ -1,4 +1,4 @@
-package EscuderiasUnidas;
+package Modelo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +6,7 @@ public class Pais {
     private int idPais;
     private String descripcion;
     private List<Escuderia>escuderias;
-    private Persona persona;
+    private List <Persona> personas;
     private List<Circuito>circuitos;
     private List<Carrera>carreras;
 
@@ -16,11 +16,11 @@ public class Pais {
         this.carreras = new ArrayList<>();
     }
 
-    public Pais(int idPais, String descripcion,List<Escuderia> escuderias,Persona persona,List <Circuito>circuitos,List <Carrera>carreras){
+    public Pais(int idPais, String descripcion,List<Escuderia> escuderias,List <Persona> personas,List <Circuito>circuitos,List <Carrera>carreras){
         this.idPais = idPais;
         this.descripcion = descripcion;
         this.escuderias = escuderias;
-        this.persona = persona;
+        this.personas = personas;
         this.circuitos = circuitos;
         this.carreras = carreras;
     }
