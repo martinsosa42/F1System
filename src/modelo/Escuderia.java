@@ -1,45 +1,45 @@
-package Modelo;
+package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Escuderia {
     private String nombre;
     private Pais pais;
-    //Asociacion 1..* con Auto, Mecanico y Piloto.
     private List<Auto>autos;
     private List<Mecanico>mecanicos;
-    private List<PilotoEscuderia>pilotosEscuderia;
+    private List<PilotoEscuderia>pilotoEscuderia;
 
     public Escuderia(){
         this.mecanicos = new ArrayList<Mecanico>();
         this.autos = new ArrayList<>();
-        this.pilotosEscuderia = new ArrayList<>();
+        this.pilotoEscuderia = new ArrayList<>();
     }
 
-    public Escuderia(String nombre, Pais pais,List<Mecanico>mecanicos,List <Auto> autos,List <Piloto> pilotos){
+    public Escuderia(String nombre, Pais pais,List<Mecanico>mecanicos,List <Auto> autos,List <PilotoEscuderia> pilotoEscuderia){
         this.nombre = nombre;
         this.pais = pais;
-        this.autos = new ArrayList<>(); //Inicio de las listas.
+        this.autos = new ArrayList<>();
         this.mecanicos = mecanicos;
-        this.autos = autos;
-        this.pilotosEscuderia = pilotosEscuderia;
+        this.pilotoEscuderia = pilotoEscuderia;
     }
 
     public void agregarMecanico(Mecanico m){
         this.mecanicos.add(m);
     }
+
     public void agregarAuto(Auto a){
         this.autos.add(a);
     }
+
     public void agregarPilotoEscuderia(PilotoEscuderia pe){
-        this.pilotosEscuderia.add(pe);
+        this.pilotoEscuderia.add(pe);
     }
 
     public String getNombre() {return nombre;}
     public Pais getPais() {return pais;}
     public List<Mecanico> getMecanicos() {return mecanicos;}
     public List<Auto> getAutos() {return autos;}
-    public List<PilotoEscuderia> getPilotosEscuderia() {return pilotosEscuderia;}
+    public List<PilotoEscuderia> getPilotoEscuderia() {return pilotoEscuderia;}
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -53,7 +53,11 @@ public class Escuderia {
     public void setAutos(List<Auto> autos) {
         this.autos = autos;
     }
-    public void setPilotosEscuderia(List<PilotoEscuderia> pilotosEscuderia) {
-        this.pilotosEscuderia = pilotosEscuderia;
+    public void setPilotoEscuderia(List<PilotoEscuderia> pilotoEscuderia) {
+        this.pilotoEscuderia = pilotoEscuderia;
+    }
+
+    public String toString(){
+        return "Escuderia: "+nombre;
     }
 }

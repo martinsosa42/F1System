@@ -1,4 +1,4 @@
-package Modelo;
+package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +6,6 @@ public class Pais {
     private int idPais;
     private String descripcion;
     private List<Escuderia>escuderias;
-    private List <Persona> personas;
     private List<Circuito>circuitos;
     private List<Carrera>carreras;
 
@@ -16,11 +15,10 @@ public class Pais {
         this.carreras = new ArrayList<>();
     }
 
-    public Pais(int idPais, String descripcion,List<Escuderia> escuderias,List <Persona> personas,List <Circuito>circuitos,List <Carrera>carreras){
+    public Pais(int idPais, String descripcion,List<Escuderia> escuderias,List <Circuito>circuitos,List <Carrera>carreras){
         this.idPais = idPais;
         this.descripcion = descripcion;
         this.escuderias = escuderias;
-        this.personas = personas;
         this.circuitos = circuitos;
         this.carreras = carreras;
     }
@@ -46,9 +44,6 @@ public class Pais {
     public List<Escuderia> getEscuderias() {
         return escuderias;
     }
-    public Persona getPersona() {
-        return persona;
-    }
     public List<Circuito> getCircuitos() {
         return circuitos;
     }
@@ -65,13 +60,15 @@ public class Pais {
     public void setEscuderias(List<Escuderia> escuderias) {
         this.escuderias = escuderias;
     }
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
     public void setCircuitos(List<Circuito> circuitos) {
         this.circuitos = circuitos;
     }
     public void setCarreras(List<Carrera> carreras) {
         this.carreras = carreras;
+    }
+
+    @Override
+    public String toString() {
+        return descripcion;
     }
 }

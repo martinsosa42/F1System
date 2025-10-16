@@ -1,26 +1,16 @@
-package Modelo;
-import java.util.List;
-import java.util.ArrayList;
+package modelo;
 
 public abstract class Persona {
     protected String dni;
     protected String nombre;
     protected String apellido;
-    private List<Pais>paises;
 
-    public Persona(){
-        this.paises = new ArrayList<>();
-    }
+    public Persona(){}
 
-    public Persona(String dni, String nombre, String apellido,List<Pais>paises){
+    public Persona(String dni, String nombre, String apellido){
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.paises = paises;
-    }
-
-    public void agregarPais(Pais p){
-        this.paises.add(p);
     }
 
     public String getDni() {
@@ -41,5 +31,9 @@ public abstract class Persona {
     }
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String toString(){
+        return nombre + " " + apellido + " (DNI:" + dni + ")";
     }
 }

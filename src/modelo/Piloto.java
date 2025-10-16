@@ -1,4 +1,4 @@
-package Modelo;
+package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,28 +8,33 @@ public class Piloto extends Persona{
     private int polePosition;
     private int vueltasRapidas;
     private int podios;
-    private List<AutoPiloto>autoPilotos;
+    private List<AutoPiloto>autoPiloto;
+    private List<PilotoEscuderia>pilotoEscuderia;
 
 
     public Piloto(){
-        this.autoPilotos = new ArrayList<>();
+        this.autoPiloto = new ArrayList<>();
+        this.pilotoEscuderia = new ArrayList<>();
     }
 
-    public Piloto(String dni,String nombre,String apellido,int numeroCompetencia, int victorias, int polePosition, int vueltasRapidas, int podios,List<Pais>paises){
-        super(dni, nombre, apellido,paises);
+    public Piloto(String dni,String nombre,String apellido,int numeroCompetencia, int victorias, int polePosition, int vueltasRapidas, int podios,List<Pais>paises,List<AutoPiloto> autoPiloto,List<PilotoEscuderia>pilotoEscuderia){
+        super(dni, nombre, apellido);
         this.numeroCompetencia = numeroCompetencia;
         this.victorias = victorias;
         this.polePosition = polePosition;
         this.vueltasRapidas = vueltasRapidas;
         this.podios = podios;
-        this.autoPilotos = autoPilotos;
+        this.autoPiloto = autoPiloto;
+        this.pilotoEscuderia = pilotoEscuderia;
     }
 
-    //Metodos para agregar Escuderias y Autos a las listas.
     public void agregarAutoPilotos(AutoPiloto ap){
-        this.autoPilotos.add(ap);
+        this.autoPiloto.add(ap);
     }
 
+    public void agregegarEscuderia(PilotoEscuderia pe ){
+        this.pilotoEscuderia.add(pe);
+    }
 
     public int getNumeroCompetencia() {
         return numeroCompetencia;
@@ -44,7 +49,7 @@ public class Piloto extends Persona{
     public int getPodios() {
         return podios;
     }
-    public List<AutoPiloto> getAutoPilotos() {return autoPilotos;}
+    public List<AutoPiloto> getAutoPiloto() {return autoPiloto;}
 
     public void setNumeroCompetencia(int numeroCompetencia) {
         this.numeroCompetencia = numeroCompetencia;
@@ -61,5 +66,10 @@ public class Piloto extends Persona{
     public void setPodios(int podios) {
         this.podios = podios;
     }
-    public void setAutoPilotos(List<AutoPiloto> autoPilotos) {this.autoPilotos = autoPilotos;}
+    public void setAutoPiloto(List<AutoPiloto> autoPiloto) {this.autoPiloto = autoPiloto;}
+
+    @Override
+    public String toString() {
+        return super.toString() + " [#"+numeroCompetencia+"]";
+    }
 }

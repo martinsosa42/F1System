@@ -1,4 +1,4 @@
-package Modelo;
+package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,8 +11,8 @@ public class Mecanico extends Persona{
         this.escuderias = new ArrayList<>();
     }
 
-    public Mecanico(String dni, String nombre, String apellido,List<Pais>paises, Especialidad especialidad, int aniosExperiencia,List<Escuderia> escuderias){
-        super(dni, nombre, apellido,paises);
+    public Mecanico(String dni, String nombre, String apellido,Especialidad especialidad, int aniosExperiencia,List<Escuderia> escuderias){
+        super(dni, nombre, apellido);
         this.especialidad = especialidad;
         this.aniosExperiencia = aniosExperiencia;
         this.escuderias = escuderias;
@@ -41,6 +41,11 @@ public class Mecanico extends Persona{
     }
     public void setEscuderias(List<Escuderia> escuderias) {
         this.escuderias = escuderias;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ " - " + especialidad + " (" + aniosExperiencia + "Años de experiencia";
     }
 }
 
