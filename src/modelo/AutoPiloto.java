@@ -6,21 +6,14 @@ public class AutoPiloto {
     private String fechaAsignacion;
     private Auto auto;
     private Piloto piloto;
-    private List<Carrera>carreras;
 
     public AutoPiloto(){
-        this.carreras = new ArrayList<>();
     }
 
-    public AutoPiloto(String fechaAsignacion,Auto auto,Piloto piloto,List<Carrera>carreras){
+    public AutoPiloto(String fechaAsignacion,Auto auto,Piloto piloto){
         this.fechaAsignacion = fechaAsignacion;
         this.auto = auto;
         this.piloto = piloto;
-        this.carreras = carreras;
-    }
-
-    public void agregarCarrera(Carrera c){
-        this.carreras.add(c);
     }
 
     public String getFechaAsignacion() {
@@ -32,7 +25,6 @@ public class AutoPiloto {
     public Piloto getPiloto() {
         return piloto;
     }
-    public List<Carrera> getCarreras() {return carreras;}
 
     public void setFechaAsignacion(String fechaAsignacion) {
         this.fechaAsignacion = fechaAsignacion;
@@ -43,5 +35,4 @@ public class AutoPiloto {
     public void setPiloto(Piloto piloto) {
         this.piloto = piloto;
     }
-    public void setCarreras(List<Carrera> carreras) {this.carreras = carreras;}
 }

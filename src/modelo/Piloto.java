@@ -32,7 +32,7 @@ public class Piloto extends Persona{
         this.autoPiloto.add(ap);
     }
 
-    public void agregegarEscuderia(PilotoEscuderia pe ){
+    public void agregarEscuderia(PilotoEscuderia pe ){
         this.pilotoEscuderia.add(pe);
     }
 
