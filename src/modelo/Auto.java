@@ -20,7 +20,7 @@ public class Auto {
     }
 
     public void agregarAutoPiloto(AutoPiloto ap){
-        this.autoPiloto.add(ap);
+        autoPiloto.add(ap);
     }
 
     public String getModelo() {
