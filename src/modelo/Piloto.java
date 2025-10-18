@@ -30,6 +30,7 @@ public class Piloto extends Persona{
 
     public void agregarAutoPilotos(AutoPiloto ap){
         this.autoPiloto.add(ap);
+        asdasdasdasd
     }
 
     public void agregegarEscuderia(PilotoEscuderia pe ){
