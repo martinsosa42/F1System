@@ -44,7 +44,4 @@ public class Circuito {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-    public void setCarreras(List<Carrera> carreras) {
-        this.carreras = carreras;
-    }
 }

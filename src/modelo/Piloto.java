@@ -66,7 +66,6 @@ public class Piloto extends Persona{
     public void setPodios(int podios) {
         this.podios = podios;
     }
-    public void setAutoPiloto(List<AutoPiloto> autoPiloto) {this.autoPiloto = autoPiloto;}
 
     @Override
     public String toString() {

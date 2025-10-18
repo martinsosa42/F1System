@@ -47,12 +47,6 @@ public class Escuderia {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-    public void setMecanicos(List<Mecanico> mecanicos) {
-        this.mecanicos = mecanicos;
-    }
-    public void setAutos(List<Auto> autos) {
-        this.autos = autos;
-    }
     public void setPilotoEscuderia(List<PilotoEscuderia> pilotosEscuderia) {
         this.pilotoEscuderia = pilotoEscuderia;
     }

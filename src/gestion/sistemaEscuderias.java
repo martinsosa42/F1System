@@ -3,7 +3,7 @@ import modelo.*;
 import java.util.ArrayList;
 import java.util.List;
 //*
-public class metodo {
+public class sistemaEscuderias {
     private List<Mecanico>mecanicos = new ArrayList<>();
     private List<Auto>autos = new ArrayList<>();
     private List<Escuderia>escuderias = new ArrayList<>();
