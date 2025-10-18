@@ -4,13 +4,15 @@ public abstract class Persona {
     protected String dni;
     protected String nombre;
     protected String apellido;
+    protected Pais pais;
 
     public Persona(){}
 
-    public Persona(String dni, String nombre, String apellido){
+    public Persona(String dni, String nombre, String apellido,Pais pais){
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.pais = pais;
     }
 
     public String getDni() {
@@ -22,6 +24,9 @@ public abstract class Persona {
     public String getApellido() {
         return apellido;
     }
+    public Pais getPais() {
+        return pais;
+    }
 
     public void setDni(String dni) {
         this.dni = dni;
@@ -31,6 +36,9 @@ public abstract class Persona {
     }
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 
     public String toString(){

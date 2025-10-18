@@ -6,21 +6,21 @@ public class Auto {
     private String modelo;
     private String motor;
     private Escuderia escuderia;
-    private List<AutoPiloto> autoPiloto;
+    private List<AutoPiloto> autoPilotos;
 
     public Auto(){
-        this.autoPiloto = new ArrayList<AutoPiloto>();
+        this.autoPilotos = new ArrayList<>();
     }
 
-    public Auto(String modelo, String motor, Escuderia escuderia,List<AutoPiloto> autoPiloto) {
+    public Auto(String modelo, String motor, Escuderia escuderia,List<AutoPiloto> autoPilotos) {
         this.modelo = modelo;
         this.motor = motor;
         this.escuderia = escuderia;
-        this.autoPiloto = autoPiloto;
+        this.autoPilotos = autoPilotos;
     }
 
     public void agregarAutoPiloto(AutoPiloto ap){
-        this.autoPiloto.add(ap);
+        this.autoPilotos.add(ap);
     }
 
     public String getModelo() {
@@ -32,7 +32,7 @@ public class Auto {
     public Escuderia getEscuderia() {
         return escuderia;
     }
-    public List<AutoPiloto> getAutoPilotos() {return autoPiloto;}
+    public List<AutoPiloto> getAutoPilotos() {return autoPilotos;}
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
@@ -41,5 +41,5 @@ public class Auto {
         this.motor = motor;
     }
     public void setEscuderia(Escuderia escuderia) {this.escuderia = escuderia;}
-    public void setAutoPilotos(List<AutoPiloto> autoPilotos) {this.autoPiloto = autoPilotos; }
+    public void setAutoPilotos(List<AutoPiloto> autoPilotos) {this.autoPilotos = autoPilotos; }
 }

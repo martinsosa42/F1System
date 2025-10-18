@@ -19,10 +19,6 @@ public class AutoPiloto {
         this.carreras = carreras;
     }
 
-    public void agregarAutoPiloto(String fechaAsignacion,Auto auto,Piloto piloto){
-        agregarAutoPiloto(fechaAsignacion,auto,piloto);
-    }
-
     public void agregarCarrera(Carrera c){
         this.carreras.add(c);
     }

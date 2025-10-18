@@ -17,8 +17,8 @@ public class Piloto extends Persona{
         this.pilotoEscuderia = new ArrayList<>();
     }
 
-    public Piloto(String dni,String nombre,String apellido,int numeroCompetencia, int victorias, int polePosition, int vueltasRapidas, int podios,List<Pais>paises,List<AutoPiloto> autoPiloto,List<PilotoEscuderia>pilotoEscuderia){
-        super(dni, nombre, apellido);
+    public Piloto(String dni,String nombre,String apellido,Pais pais,int numeroCompetencia, int victorias, int polePosition, int vueltasRapidas, int podios,List<AutoPiloto> autoPiloto,List<PilotoEscuderia>pilotoEscuderia){
+        super(dni, nombre, apellido,pais);
         this.numeroCompetencia = numeroCompetencia;
         this.victorias = victorias;
         this.polePosition = polePosition;
