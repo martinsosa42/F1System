@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 //*
 public class metodo {
-    private List<Piloto>pilotos = new ArrayList<>();
     private List<Mecanico>mecanicos = new ArrayList<>();
     private List<Auto>autos = new ArrayList<>();
     private List<Escuderia>escuderias = new ArrayList<>();
@@ -17,9 +16,6 @@ public class metodo {
     //Registro.
     public void agregarAutoPiloto(AutoPiloto ap){
         autoPiloto.add(ap);
-    }
-    public void agregegarEscuderia(PilotoEscuderia pe ){
-        this.pilotoEscuderia.add(pe);
     }
     public void agregarMecanico(Mecanico m){
         mecanicos.add(m);
@@ -39,8 +35,4 @@ public class metodo {
     public void agregarCircuito(Circuito c){
         circuitos.add(c);
     }
-    public void agregarPiloto(Piloto p){
-        pilotos.add(p);
-    }
-
 }

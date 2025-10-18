@@ -7,20 +7,20 @@ public class Escuderia {
     private Pais pais;
     private List<Auto>autos;
     private List<Mecanico>mecanicos;
-    private List<PilotoEscuderia>pilotosEscuderia;
+    private List<PilotoEscuderia>pilotoEscuderia;
 
     public Escuderia(){
         this.mecanicos = new ArrayList<Mecanico>();
         this.autos = new ArrayList<>();
-        this.pilotosEscuderia = new ArrayList<>();
+        this.pilotoEscuderia = new ArrayList<>();
     }
 
-    public Escuderia(String nombre, Pais pais,List<Mecanico>mecanicos,List <Auto> autos,List <PilotoEscuderia> pilotosEscuderia){
+    public Escuderia(String nombre, Pais pais,List<Mecanico>mecanicos,List <Auto> autos,List <PilotoEscuderia> pilotoEscuderia){
         this.nombre = nombre;
         this.pais = pais;
         this.autos = new ArrayList<>();
         this.mecanicos = mecanicos;
-        this.pilotosEscuderia = pilotosEscuderia;
+        this.pilotoEscuderia = pilotoEscuderia;
     }
 
     public void agregarMecanico(Mecanico m){
@@ -31,15 +31,15 @@ public class Escuderia {
         this.autos.add(a);
     }
 
-    public void agregarPilotosEscuderia(PilotoEscuderia pe){
-        this.pilotosEscuderia.add(pe);
+    public void agregarPilotoEscuderia(PilotoEscuderia pe){
+        this.pilotoEscuderia.add(pe);
     }
 
     public String getNombre() {return nombre;}
     public Pais getPais() {return pais;}
     public List<Mecanico> getMecanicos() {return mecanicos;}
     public List<Auto> getAutos() {return autos;}
-    public List<PilotoEscuderia> getPilotosEscuderia() {return pilotosEscuderia;}
+    public List<PilotoEscuderia> getPilotoEscuderia() {return pilotoEscuderia;}
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -54,7 +54,7 @@ public class Escuderia {
         this.autos = autos;
     }
     public void setPilotoEscuderia(List<PilotoEscuderia> pilotosEscuderia) {
-        this.pilotosEscuderia = pilotosEscuderia;
+        this.pilotoEscuderia = pilotoEscuderia;
     }
 
     public String toString(){
