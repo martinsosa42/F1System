@@ -7,20 +7,17 @@ public class Pais {
     private String descripcion;
     private List<Escuderia>escuderias;
     private List<Circuito>circuitos;
-    private List<Carrera>carreras;
 
     public Pais(){
         this.escuderias = new ArrayList<>();
         this.circuitos = new ArrayList<>();
-        this.carreras = new ArrayList<>();
     }
 
-    public Pais(int idPais, String descripcion,List<Escuderia> escuderias,List <Circuito>circuitos,List <Carrera>carreras){
+    public Pais(int idPais, String descripcion,List<Escuderia> escuderias,List <Circuito>circuitos){
         this.idPais = idPais;
         this.descripcion = descripcion;
         this.escuderias = escuderias;
         this.circuitos = circuitos;
-        this.carreras = carreras;
     }
 
     public void agregarEscuderias(Escuderia e){
@@ -29,10 +26,6 @@ public class Pais {
 
     public void agregarCircuito(Circuito c){
         this.circuitos.add(c);
-    }
-
-    public void agregarCarrera(Carrera c){
-        this.carreras.add(c);
     }
 
     public int getIdPais() {
@@ -47,9 +40,6 @@ public class Pais {
     public List<Circuito> getCircuitos() {
         return circuitos;
     }
-    public List<Carrera> getCarreras() {
-        return carreras;
-    }
 
     public void setIdPais(int idPais) {
         this.idPais = idPais;
@@ -62,9 +52,6 @@ public class Pais {
     }
     public void setCircuitos(List<Circuito> circuitos) {
         this.circuitos = circuitos;
-    }
-    public void setCarreras(List<Carrera> carreras) {
-        this.carreras = carreras;
     }
 
     @Override
